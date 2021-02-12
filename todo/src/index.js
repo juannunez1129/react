@@ -5,13 +5,14 @@ import TodosContext from './context'
 import todosReducer from './reducer'
 
 import Todo from './Components/Todo'
-
+import TodoForm from './Components/TodoForm'
 const App = () => {
   const initialState = useContext(TodosContext)
   const [state, dispatch] = useReducer(todosReducer, initialState)
 
   return (
     <TodosContext.Provider value = {{state, dispatch}}>
+      <TodoForm />
       <Todo />
     </TodosContext.Provider>
   )
