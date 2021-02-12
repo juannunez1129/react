@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext, useReducer} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+const App = () => {
+  
+}
 
 ReactDOM.render(
   <React.StrictMode>
