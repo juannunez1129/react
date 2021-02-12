@@ -1,19 +1,19 @@
 import React, {useContext, useReducer} from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import todosContext from './context'
+import TodosContext from './context'
 import todosReducer from './reducer'
 
 import Todo from './Components/Todo'
 
 const App = () => {
-  const initialState = useContext(todosContext)
+  const initialState = useContext(TodosContext)
   const [state, dispatch] = useReducer(todosReducer, initialState)
 
   return (
-    <todosContext.Provider value = {{state, dispatch}}>
+    <TodosContext.Provider value = {{state, dispatch}}>
       <Todo />
-    </todosContext.Provider>
+    </TodosContext.Provider>
   )
 }
 
