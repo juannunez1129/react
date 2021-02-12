@@ -15,7 +15,7 @@ return (
                     onDoubleClick={() => dispatch({ type: "TOGGLE_TODO", payload: todo })} 
                     className ={`flex-1 m1-12 cursor-pointer ${todo.complete && "line-through text-grey-darkest"}`}>{todo.text}</span>
                 <button
-                
+                    onClick={()=> dispatch({ type: "SET_CURRENT_TODO", payload: todo})}
                 >
                 <img src="https://img.icons8.com/android/24/000000/edit.png" alt= "Edit icon" className = "h-6"/>
                 </button>
