@@ -18,7 +18,9 @@ return (
                 <img src="https://img.icons8.com/android/24/000000/edit.png" alt= "Edit icon" className = "h-6"/>
                 </button>
 
-                <button>
+                <button
+                    onClick = {() => dispatch({ type: "REMOVE_TODO", payload: todo})}
+                >
                     <img src="https://img.icons8.com/ios/100/000000/delete-sign--v1.png" alt= "Delete icon" className = "h-6"/>
                 </button>
 
