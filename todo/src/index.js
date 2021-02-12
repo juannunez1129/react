@@ -1,9 +1,18 @@
 import React, {useContext, useReducer} from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import todosContext from './context';
+import todosReducer from './reducer';
 
 const App = () => {
-  
+  const initialState = useContext(todosContext)
+  const [state, dispatch] = useReducer(todosReducer, initialState)
+
+  return (
+    <todosContext.Provider value = {{state, dispatch}}>
+      
+    </todosContext.Provider>
+  )
 }
 
 ReactDOM.render(
