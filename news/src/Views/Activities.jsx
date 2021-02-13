@@ -1,10 +1,10 @@
 import React from 'react';
 import Article from '../Components/Article';
 
-function Politics() {
+function Activities() {
     return (
         <div>
-            <h1>Political News goes here: </h1>
+            <h1>activities goes here: </h1>
             <Article/>
             <Article/>
             <Article/>
@@ -12,4 +12,4 @@ function Politics() {
     )
 }
 
-export default Politics;
+export default Activities;

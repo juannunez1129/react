@@ -1,8 +1,22 @@
-import React from 'react';
+import React, {useContext, useReducer} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TodosContext from './context'
+import todosReducer from './reducer'
+
+import Todo from './Components/Todo'
+import TodoForm from './Components/TodoForm'
+const App = () => {
+  const initialState = useContext(TodosContext)
+  const [state, dispatch] = useReducer(todosReducer, initialState)
+
+  return (
+    <TodosContext.Provider value = {{state, dispatch}}>
+      <TodoForm />
+      <Todo />
+    </TodosContext.Provider>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
