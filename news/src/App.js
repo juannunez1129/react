@@ -3,9 +3,11 @@ import NavBar from './Components/NavBar';
 import Headlines from './Views/Headlines';
 import Sports from './Views/Sports';
 import Weather from './Views/Weather';
-import Politics from './Views/Activities';
 import Footer from './Components/Footer';
+import Activities from './Views/Activities';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+<Router>
 function App() {
   return (
     <div className="App">
@@ -19,12 +21,12 @@ function App() {
           <Headlines/>
           <Sports/>
           <Weather/>
-          <Politics/>
+          <Activities/>
         </div>
       </header>
       <Footer/>
     </div>
   );
 }
-
+</Router>
 export default App;
