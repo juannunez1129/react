@@ -23,7 +23,7 @@ export default function TodoForm(){
 
     return (
         <form onSubmit={handleSubmit} className = "flex justify-center p-5">
-            <input type= "text" className="border-black border-solid border-2" onChange = {event => setTodo(event.target.value)}
+            <input type= "text" className="border-black border-solid border-2" placeholder="Add items here"  onChange = {event => setTodo(event.target.value)}
             value = {todo}
             />
             

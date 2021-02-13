@@ -3,7 +3,7 @@ import TodosContext from '../context'
 
 export default function Todo(){
 const { state,dispatch } = useContext(TodosContext);
-const title = state.todos.length > 0 ? `${state.todos.length} Todos` : "Nothing to do today!"
+const title = state.todos.length > 0 ? `${state.todos.length} Todos left` : "Nothing to do today!"
 
 return (
     <div className="container mx-auto max-w-md text-center font-mono">
@@ -28,6 +28,11 @@ return (
 
                 </li>
             ))}
+            <div>
+               <p>
+               To mark a todo as done double click it
+               </p>
+            </div>
         </ul>
     </div>
 );
